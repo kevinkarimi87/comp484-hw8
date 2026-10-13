@@ -1,0 +1,151 @@
+/* Color Palette
+# - navy: #1E2A44 (header, body, and footer background, text on light)
+# - off-white: #F4F6F8 (work experience background, text on dark)
+# - steel blue: #DDE6EF (education background)
+# - sky blue: #8FB8DE (accent for links)
+*/
+
+/* Global styles 
+------------------------------------*/
+html {
+  box-sizing: border-box;
+  scroll-padding-top: 54px; /* leave that much room at the top of the window when it scrolls to a link target */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0; /* removes the default white border around the page */
+  line-height: 1.5;
+  background: #1E2A44; /* matches the footer so any extra space blends in */
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* headers */
+h1 {
+  font-size: 3rem;
+  font-weight: 700; /* bold name */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+/* end of headers*/
+
+/* Layout
+------------------------------------*/
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+  clear: left; /* starts each row below the previous floats */
+}
+
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+/* Nav bar
+------------------------------------*/
+.nav-bar {
+  background: #1E2A44;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; /* pins nav bar to top left of page */
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar a {
+  color: #F4F6F8;
+  text-decoration: none;
+  padding: 15px 25px;
+  display: inline-block;
+}
+
+.nav-bar a:hover {
+  background: #8FB8DE; /* sky blue for hover */
+  color: #1E2A44; /* navy text on hover */
+}
+
+/* Header
+------------------------------------*/
+header {
+  background: #1E2A44;
+  color: #F4F6F8;
+  padding-top: 50px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.25rem; /* smaller than other h2s, since it's a tagline */
+  font-weight: 400; /* regular weight so the name stands out more */
+  margin: 0;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 27%;
+  padding-right: 0;
+  margin-right: 3%; /* the gap moves from padding to margin, so the image stays round */
+  aspect-ratio: 1 / 1; /* forces a square box, so 50% rounding is a true circle */
+  object-fit: cover; /* crops the photo to fill the square instead of stretching it */
+  object-position: center; /* keeps the crop centered on the middle of the photo */
+}
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+  background: #F4F6F8;
+  color: #1E2A44;
+}
+
+/* Education
+------------------------------------*/
+.education {
+  background: linear-gradient(rgba(30, 42, 68, 0.9), rgba(30, 42, 68, 0.7)), url('../images/city_night_background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: #F4F6F8;
+}
+
+/* Footer
+------------------------------------*/
+footer {
+  text-align: center;
+  background: #1E2A44;
+  color: #F4F6F8;
+}
+
+footer a {
+  color: #8FB8DE; /* Sky blue for links */
+}
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
